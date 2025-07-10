@@ -1,0 +1,79 @@
+
+Assistente de Meta para Jogos (e mais!) 
+Este é um projeto de front-end que funciona como um assistente inteligente. Ele utiliza a API do Google Gemini para fornecer respostas sobre estratégias, builds e dicas para jogos como Valorant, League of Legends e CS2. Além disso, pode responder a perguntas sobre temas gerais do dia a dia.
+
+Funcionalidades
+Integração com a API do Google Gemini: Utiliza o modelo gemini-2.5-flash para gerar respostas rápidas e coerentes.
+
+Prompt Engineering Detalhado: O prompt enviado para a IA é cuidadosamente construído para que ela atue como uma especialista no contexto selecionado (seja um jogo específico ou um tema geral).
+
+Seleção de Contexto: Permite que o usuário escolha entre diferentes jogos ou um modo de perguntas gerais para obter respostas mais precisas.
+
+Renderização de Markdown: As respostas da IA, formatadas em Markdown, são convertidas para HTML e exibidas de forma legível na tela usando a biblioteca Showdown.js.
+
+Interface Responsiva e Animada: O front-end é estilizado com CSS moderno, incluindo gradientes, animações e um estado de "loading" para melhor experiência do usuário.
+
+ecnologias Utilizadas
+Este projeto foi construído utilizando as seguintes tecnologias e conceitos:
+
+Front-End:
+
+HTML5: Para a estrutura da página.
+
+CSS3: Para estilização, layout, gradientes e animações.
+
+JavaScript (ES6+): Para toda a lógica do lado do cliente, manipulação do DOM e interatividade.
+
+APIs e Bibliotecas:
+
+Google Gemini API: O cérebro por trás das respostas inteligentes.
+
+Fetch API: Para realizar as chamadas HTTP para o servidor da Gemini.
+
+Showdown.js: Para converter as respostas em Markdown para HTML.
+
+omo Utilizar
+Para rodar este projeto localmente, siga os passos abaixo:
+
+Clone o Repositório
+
+Bash
+
+git clone https://github.com/JaumvlQueiroz/Nlw.git
+cd : NLW
+Obtenha uma API Key
+
+Você precisará de uma chave de API do Google AI Studio para usar o Gemini.
+
+Acesse Google AI Studio e crie sua chave gratuitamente.
+
+Abra o Projeto
+
+Não é necessário um servidor. Apenas abra o arquivo index.html no seu navegador de preferência.
+
+Use o Assistente
+
+Informe a API Key: Cole a sua chave do Gemini no primeiro campo.
+
+Selecione o Jogo: Escolha um dos jogos ou a opção "Pergunte sobre qualquer coisa".
+
+Faça sua pergunta: Digite sua dúvida no campo de texto e clique em "Perguntar". A resposta aparecerá logo abaixo!
+
+Como Funciona
+O fluxo de funcionamento é simples:
+
+O usuário preenche o formulário com sua API Key, o contexto (jogo) e a pergunta.
+
+Ao enviar, o JavaScript captura esses dados e desabilita o botão para evitar múltiplas requisições.
+
+Uma requisição POST é enviada para a API do Gemini, contendo um prompt detalhado que instrui a IA sobre como deve se comportar e formatar a resposta.
+
+A resposta, que chega em formato JSON com o conteúdo em Markdown, é extraída.
+
+A biblioteca Showdown.js converte o texto em Markdown para HTML.
+
+O HTML resultante é inserido na página, e o campo de resposta, antes oculto, é exibido para o usuário.
+
+
+Feito com ❤️ por [JAUM]
+

@@ -1,0 +1,193 @@
+body {
+    background: #222 url('./assets/bg.jpg');
+    background-repeat: no-repeat;
+    /* KeyWord */
+    background-size: 100% auto;
+    /* width height*/
+    background-position: top center;
+    /* X vertical  , Y horizontal  */
+    background-color: #121214;
+    /* Hex: RR, GG, BB */
+    color: white;
+}
+
+body {
+    background: #121214 url('./assets/bg.jpg') no-repeat top center;
+    background-size: 100% auto;
+
+    color: white;
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;
+    /* APLIQUE A FONTE AQUI */
+}
+
+header {
+    padding-top: 2rem;
+    text-align: center;
+
+}
+
+header img {
+    margin-top: 10rem;
+    width: 15rem;
+}
+
+main {
+    max-width: 36rem;
+    width: 90%;
+    margin: 3rem auto;
+}
+
+section {
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50%, #E2D45C 100%);
+    border-radius: 0.625rem;
+    padding-top: 4px;
+}
+
+/* Estilo da "borda" gradiente */
+section {
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50%, #E2D45C 100%);
+    border-radius: 0.625rem;
+    /* 10px */
+    padding-top: 4px;
+    /* Altura da borda gradiente */
+}
+
+/* Estilo do "miolo" da caixa */
+section>div {
+    padding: 2rem;
+    /* 32px */
+    padding-top: 1.5rem;
+    /* 24px */
+    border-radius: 0.5rem;
+    /* 8px */
+    background-color: #2A2634;
+}
+
+section {
+    letter-spacing: -0.47px;
+}
+
+section p {
+    letter-spacing: -0.18;
+    color: #A1A1AA;
+}
+
+/*animações*/
+main section {
+    opacity: 1;
+    transform: translateY(-2rem);
+    animation-name: appear;
+    animation-duration: 700ms;
+    -o-animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
+
+form {
+    display: flex;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+    margin: 1.25rem 0;
+}
+
+input,
+select,
+button {
+    all: unset;
+    border: 2px solid #9147FF;
+    border-radius: 0.5rem;
+    padding: 0.675rem;
+    font-size: 0.875rem;
+    background-color: #00000066;
+
+}
+
+input {
+    flex: 1;
+}
+
+button {
+    width: 100%;
+    border: 0;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50%, #E2D45C 100%);
+    padding: 0.675;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.12px;
+
+    transition: all 0.3s;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 1rem rgba(255, 248, 107, 0.2);
+}
+
+#askButton:disabled {
+    transition: initial;
+    transform: initial;
+    box-shadow: initial;
+    cursor: not-allowed;
+    background-image: linear-gradient(140deg, #61616B 0%, #212121 100%);
+    background-color: #4B4B57;
+    color: #90909A;
+    cursor: not-allowed;
+}
+
+#iaresponse {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    border-left: none;
+    margin-top: 1rem;
+
+    border-left-width: 4px;
+    border-style: solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to bottom, white, #4385E7, #9572FC);
+    /* Estado inicial */
+    transition: border-image-source 2s ease-in-out;
+    /* Aplica a transição à propriedade */
+}
+
+#iaresponse:hover {
+    /* Exemplo: Anima ao passar o mouse */
+    border-image-source: linear-gradient(to bottom, #9572FC, white, #4385E7);
+    /* Estado final */
+}
+
+
+#iaresponse ul {
+    padding-left: 1.5rem;
+    opacity: 0.8;
+}
+
+#iaresponse p {
+    color: white;
+
+
+}
+
+
+.loading {
+    animation: pulse 2s infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes pulse {
+    50% {
+        opacity: 0.5;
+    }
+}
