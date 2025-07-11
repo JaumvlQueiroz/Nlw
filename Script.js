@@ -13,7 +13,7 @@ const markdownToHTML = (text) => {
 }
 
 
-// AIzaSyBlb0IPIjYi22E7iM45D0YZV8qmrijZXnE
+
 
 const perguntarAI = async (question, game, apikey) => {
     const model = "gemini-2.5-flash"
